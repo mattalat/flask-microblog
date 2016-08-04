@@ -54,7 +54,7 @@ def render_post(post_url=None):
         thisPost = posts[i]
         title = thisPost['title']
         text = Markup(markdown.markdown(thisPost['contents']))
-        return render_template('post.jade', text=text)
+        return render_template('post.jade', text=text, title=title)
     else:
         return 'Post not found'
 
